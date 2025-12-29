@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | Beauty & Care</title>
+  <link rel="stylesheet" href="404.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<section class="error-section">
+
+  <!-- Animated Decorative Circles -->
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+
+  <!-- Main Content -->
+  <div class="error-box">
+    <h1 class="error-number">404</h1>
+
+    <p class="error-text">Oops! The page you're looking for cannot be found.</p>
+    <p class="error-sub">It may have been moved, deleted, or never existed.</p>
+
+    <a href="index.html" class="home-btn">Back to Home</a>
+  </div>
+
+</section>
+<style>/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffe8f1, #fff0f7, #ffe2f1);
+  overflow-x: hidden;
+}
+
+/* SECTION */
+.error-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 404 ANIMATION */
+.error-box {
+  text-align: center;
+  z-index: 10;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.error-number {
+  font-size: 150px;
+  font-weight: 700;
+  color: #ff5fa2;
+  line-height: 1;
+  animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+}
+
+/* TEXT */
+.error-text {
+  font-size: 22px;
+  margin-top: 10px;
+  color: #444;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.error-sub {
+  color: #666;
+  margin: 8px 0 20px;
+  animation: fadeIn 2.4s ease-in-out;
+}
+
+/* BUTTON */
+.home-btn {
+  display: inline-block;
+  background: #ff5fa2;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(255, 105, 150, 0.4);
+  animation: fadeIn 3s ease-in-out;
+}
+
+.home-btn:hover {
+  background: #ff3d87;
+  transform: translateY(-3px);
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+/* TEXT & BUTTON FADE */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ERROR BOX UP FADE */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* GLOW ANIMATION */
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #ff89c7; }
+  50% { text-shadow: 0 0 25px #ff4d97; }
+  100% { text-shadow: 0 0 5px #ff89c7; }
+}
+
+/* ANIMATED DECORATIVE CIRCLES */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 105, 150, 0.2);
+  animation: move 10s linear infinite;
+}
+
+/* Circle Sizes */
+.circle1 { width: 180px; height: 180px; top: -50px; left: -50px; animation-duration: 12s; }
+.circle2 { width: 120px; height: 120px; bottom: -40px; right: -40px; animation-duration: 9s; }
+.circle3 { width: 150px; height: 150px; top: 50%; right: -80px; animation-duration: 14s; }
+
+/* Movement Animation */
+@keyframes move {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -30px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .error-number {
+    font-size: 100px;
+  }
+  .error-text {
+    font-size: 18px;
+  }
+}
+</style>
+
+</body>
+</html>
