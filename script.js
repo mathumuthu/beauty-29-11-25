@@ -1,10 +1,8 @@
 /* PRELOADER */
 window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  setTimeout(() => {
-    preloader.classList.add("hide");
-  }, 700);
+  document.getElementById("preloader").classList.add("hide");
 });
+
 
 /* HAMBURGER */
 const hamburger = document.getElementById("hamburger");
@@ -125,3 +123,27 @@ function validateEmail(email) {
   return re.test(email);
 }
 
+
+
+
+
+
+
+const hero = document.querySelector(".hero");
+
+const images = [
+  "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?fm=webp&w=1920",
+  "https://images.unsplash.com/photo-1500835556837-99ac94a94552?fm=webp&w=1920",
+  "https://images.unsplash.com/photo-1517841905240-472988babdf9?fm=webp&w=1920",
+  "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?fm=webp&w=1920"
+];
+
+let index = 0;
+
+// Initial image
+hero.style.backgroundImage = `url(${images[0]})`;
+
+setInterval(() => {
+  index = (index + 1) % images.length;
+  hero.style.backgroundImage = `url(${images[index]})`;
+}, 5000); // change every 5 seconds
